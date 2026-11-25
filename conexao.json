@@ -1,0 +1,194 @@
+{
+    "loja": {
+      "nome": "YG Burguer",
+      "slogan": "O simples da melhor forma.",
+      "telefone": "31 97548278",
+      "email": "12501620@aluno.cotemig.com.br"
+    },
+    "entrega": {
+      "taxa": 8,
+      "pedidoMinimo": 0
+    },
+    "cupons": [
+      {
+        "codigo": "YG10",
+        "tipo": "percentual",
+        "valor": 0.1,
+        "descricao": "10% de desconto no subtotal"
+      }
+    ],
+    "categorias": [
+      "Hambúrgueres",
+      "Porções",
+      "Bebidas",
+      "Sobremesas",
+      "Combos"
+    ],
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "YG Especial",
+        "categoria": "Hambúrgueres",
+        "subtitulo": "01 / ESPECIAL É COM YG MESMO",
+        "descricao": "Pão brioche, burger 170g, cheddar, bacon, alface, tomate e molho especial da casa.",
+        "preco": 32.9,
+        "imagem": "img/H1.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "cheddar",
+          "bacon",
+          "alface",
+          "tomate",
+          "molho especial"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 2,
+        "nome": "Double YG",
+        "categoria": "Hambúrgueres",
+        "subtitulo": "02 / SABOR EM DOBRO",
+        "descricao": "Pão brioche, 2 burgers 170g, cheddar, bacon e molho especial da casa.",
+        "preco": 42.9,
+        "imagem": "img/H2.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "cheddar",
+          "bacon",
+          "molho especial"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 3,
+        "nome": "Spicy YG",
+        "categoria": "Hambúrgueres",
+        "subtitulo": "03 / PRA QUEM GOSTA DE OUSAR",
+        "descricao": "Pão brioche, burger 170g, cheddar, bacon, pimenta jalapeño, alface, tomate e molho especial.",
+        "preco": 35.9,
+        "imagem": "img/H3.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "cheddar",
+          "bacon",
+          "jalapeño",
+          "alface",
+          "tomate",
+          "molho especial"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 4,
+        "nome": "BBQ Bacon",
+        "categoria": "Hambúrgueres",
+        "subtitulo": "04 / O REI DO BACON",
+        "descricao": "Pão brioche, burger 170g, cheddar, bacon crocante e molho barbecue.",
+        "preco": 37.9,
+        "imagem": "img/H4.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "cheddar",
+          "bacon",
+          "barbecue"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 5,
+        "nome": "Funchi YG",
+        "categoria": "Hambúrgueres",
+        "subtitulo": "05 / UMA COMBINAÇÃO ESPECIAL",
+        "descricao": "Pão brioche, burger 170g, queijo prato, funghi, rúcula e molho especial.",
+        "preco": 39.9,
+        "imagem": "img/H5.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "queijo prato",
+          "funghi",
+          "rúcula",
+          "molho especial"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 6,
+        "nome": "Batata Frita YG",
+        "categoria": "Porções",
+        "subtitulo": "EXEMPLO",
+        "descricao": "Porção de batata frita crocante com cheddar e bacon.",
+        "preco": 22.9,
+        "imagem": "img/batata.JPG",
+        "ingredientes": [
+          "batata",
+          "cheddar",
+          "bacon"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 7,
+        "nome": "Onion Rings",
+        "categoria": "Porções",
+        "subtitulo": "EXEMPLO",
+        "descricao": "Anéis de cebola empanados com molho especial da casa.",
+        "preco": 19.9,
+        "imagem": "img/onion.JPG",
+        "ingredientes": [
+          "cebola",
+          "molho especial"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 8,
+        "nome": "Refrigerante Lata",
+        "categoria": "Bebidas",
+        "subtitulo": "EXEMPLO",
+        "descricao": "Lata 350ml gelada.",
+        "preco": 6,
+        "imagem": "img/refri.JPG",
+        "ingredientes": [],
+        "disponivel": true
+      },
+      {
+        "id": 9,
+        "nome": "Milkshake de Chocolate",
+        "categoria": "Sobremesas",
+        "subtitulo": "EXEMPLO",
+        "descricao": "Milkshake cremoso de chocolate 400ml.",
+        "preco": 18.9,
+        "imagem": "img/milkshake.JPG",
+        "ingredientes": [
+          "chocolate",
+          "sorvete"
+        ],
+        "disponivel": true
+      },
+      {
+        "id": 10,
+        "nome": "Combo YG Especial",
+        "categoria": "Combos",
+        "subtitulo": "EXEMPLO",
+        "descricao": "YG Especial + batata frita + refrigerante lata.",
+        "preco": 54.9,
+        "imagem": "img/combo.JPG",
+        "ingredientes": [
+          "pão brioche",
+          "carne",
+          "cheddar",
+          "bacon",
+          "alface",
+          "tomate",
+          "molho especial",
+          "batata"
+        ],
+        "disponivel": true
+      }
+    ]
+  }

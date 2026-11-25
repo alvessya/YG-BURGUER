@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacola - YG Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="alternar-tema" class="botao-tema" type="button">
+    Modo escuro
+    </button>
+    
+<body>
+
+    
+
+    <div class="faixa">
+        SABOR DE VERDADE NÃO SE EXPLICA. SE MORDE.
+    </div>
+
+   
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/yglogo.png" alt="YG Burguer">
+            </a>
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="nossojeito.html">Nosso Jeito</a>
+            <a href="sacola.html">
+                Sacola <span id="contador-sacola">0</span>
+            </a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+        <div class="menu-direita">
+            <a href="cadastro.html" class="botao-escuro">
+                CADASTRAR ↗
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+      
+        <section class="pagina-sacola">
+
+            <h1>SUA SACOLA</h1>
+
+            <p class="subtitulo-sacola">
+                Seu próximo desejo está quase pronto.
+            </p>
+
+            <div class="conteudo-sacola">
+
+                
+
+                <div class="lista-sacola">
+
+                    <div id="itens-sacola">
+                        
+                    </div>
+
+                    <a href="cardápio.html" class="continuar-comprando">
+                        ← CONTINUAR COMPRANDO
+                    </a>
+
+                </div>
+
+                
+
+                <div class="resumo-pedido">
+
+                    <h2>RESUMO DO PEDIDO</h2>
+
+                    <hr>
+
+                    <div class="linha-resumo">
+                        <span>Subtotal (<span id="quantidade-itens">0</span> itens)</span>
+                        <span id="subtotal">R$ 0,00</span>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Taxa de entrega</span>
+                        <span id="taxa-entrega">R$ 0,00</span>
+                    </div>
+
+                    <div class="linha-resumo" id="linha-desconto">
+                        <span>Desconto</span>
+                        <span id="valor-desconto">R$ 0,00</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="total-pedido">
+                        <h3>TOTAL</h3>
+                        <h3 id="total">R$ 0,00</h3>
+                    </div>
+
+                    
+
+                    <div class="area-cupom">
+
+                        <input type="text" id="cupom" placeholder="Cupom de desconto">
+
+                        <button onclick="aplicarCupom()">
+                            APLICAR
+                        </button>
+
+                    </div>
+
+                    <button class="botao-finalizar" onclick="finalizarPedido()">
+                        FINALIZAR PEDIDO ↗
+                    </button>
+
+                    <p class="compra-segura">
+                         Compra segura e seus dados protegidos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <section class="sugestoes-sacola">
+
+            <div class="texto-sugestoes">
+
+                <h2>
+                    NÃO VAI FICAR<br>
+                    SÓ NISSO, NÉ?
+                </h2>
+
+                <p>
+                    Se liga nessas delícias que
+                    combinam demais com seu pedido!
+                </p>
+
+            </div>
+
+            <div class="produtos-sugeridos">
+
+                
+
+                <div class="sugestao">
+
+                    <img src="img/H3.JPG" alt="Spicy YG">
+
+                    <h3>SPICY YG</h3>
+
+                    <p>
+                        Burger 170g, cheddar,
+                        bacon e jalapeño.
+                    </p>
+
+                    <h4>R$ 35,90</h4>
+
+                    <button onclick="adicionarSacola('Spicy YG', 35.90); mostrarSacola();">
+                        ADICIONAR +
+                    </button>
+
+                </div>
+
+              
+
+                <div class="sugestao">
+
+                    <img src="img/H4.JPG" alt="BBQ Bacon">
+
+                    <h3>BBQ BACON</h3>
+
+                    <p>
+                        Burger 170g, cheddar,
+                        bacon e barbecue.
+                    </p>
+
+                    <h4>R$ 37,90</h4>
+
+                    <button onclick="adicionarSacola('BBQ Bacon', 37.90); mostrarSacola();">
+                        ADICIONAR +
+                    </button>
+
+                </div>
+
+                
+
+                <div class="sugestao">
+
+                    <img src="img/H5.JPG" alt="Funchi YG">
+
+                    <h3>FUNCHI YG</h3>
+
+                    <p>
+                        Burger 170g, queijo prato,
+                        funghi e rúcula.
+                    </p>
+
+                    <h4>R$ 39,90</h4>
+
+                    <button onclick="adicionarSacola('Funchi YG', 39.90); mostrarSacola();">
+                        ADICIONAR +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer id="rodape">
+        <img src="img/yglogo.png" alt="YG Burguer">
+        <p>O simples da melhor forma.</p>
+        <p>© 2026 YG Burguer - Todos os direitos reservados.</p>
+        <p>Feito com muito sabor! </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar - YG Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="alternar-tema" class="botao-tema" type="button">
+    Modo escuro
+    </button>
+    
+<body>
+
+    <div class="faixa">
+        SABOR DE VERDADE NÃO SE EXPLICA. SE MORDE.
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/yglogo.png" alt="YG Burguer">
+            </a>
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="nossojeito.html">Nosso Jeito</a>
+            <a href="sacola.html">
+                Sacola <span id="contador-sacola">0</span>
+            </a>
+            <a href="perfil.html">Perfil</a>
+            <a href="busca.html" title="Pesquisar"></a>
+        </nav>
+
+        <div class="menu-direita">
+            <a href="cadastro.html" class="botao-escuro">
+                CADASTRAR ↗
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="banner-busca">
+
+            <div class="conteudo-banner-busca">
+
+                <div class="titulo-busca">
+                    <span>♕ ENCONTRE O SEU</span>
+                    <h1>HAMBÚRGUER</h1>
+                </div>
+
+                <p>
+                    Use nossa busca para encontrar<br>
+                    seu favorito rapidinho!
+                </p>
+
+                <form class="formulario-busca" onsubmit="buscarHamburguer(); return false;">
+
+                    <input type="text" id="campoBusca" placeholder="Busque por nome do lanche, ingrediente...">
+
+                    <button type="submit">
+                        BUSCAR ↗
+                    </button>
+
+                </form>
+
+            </div>
+
+            <img src="imagens/cadastro-burguer.png" alt="Hambúrguer YG" class="imagem-banner-busca">
+
+        </section>
+
+        <section class="categorias-busca">
+
+            <div class="cabecalho-categorias">
+
+                <h2>BUSCAR POR CATEGORIA</h2>
+
+                <a href="cardápio.html">
+                    Ver todos os produtos →
+                </a>
+
+            </div>
+
+            <div class="lista-categorias">
+
+                <button onclick="buscarCategoria('Hambúrgueres')">
+                    <span></span>
+                    Hambúrgueres
+                </button>
+
+                <button onclick="buscarCategoria('Porções')">
+                    <span></span>
+                    Porções
+                </button>
+
+                <button onclick="buscarCategoria('Bebidas')">
+                    <span></span>
+                    Bebidas
+                </button>
+
+                <button onclick="buscarCategoria('Sobremesas')">
+                    <span></span>
+                    Sobremesas
+                </button>
+
+                <button onclick="buscarCategoria('Combos')">
+                    <span></span>
+                    Combos
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="ingredientes-busca">
+
+            <div class="titulo-ingredientes">
+                <span>🔎</span>
+
+                <h2>
+                    VOCÊ TAMBÉM<br>
+                    PODE BUSCAR<br>
+                    POR INGREDIENTES!
+                </h2>
+            </div>
+
+            <div class="botoes-ingredientes">
+
+                <button onclick="buscarIngrediente('bacon')">
+                    Bacon
+                </button>
+
+                <button onclick="buscarIngrediente('cheddar')">
+                    Cheddar
+                </button>
+
+                <button onclick="buscarIngrediente('carne')">
+                    Carne
+                </button>
+
+                <button onclick="buscarIngrediente('alface')">
+                    Alface
+                </button>
+
+                <button onclick="buscarIngrediente('tomate')">
+                    Tomate
+                </button>
+
+                <button onclick="buscarIngrediente('molho especial')">
+                    Molho da casa
+                </button>
+
+                <button onclick="buscarIngrediente('pão brioche')">
+                    Pão brioche
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="resultados-busca" id="resultados-busca">
+
+            <h2 id="titulo-resultados">
+                RESULTADOS DA BUSCA
+            </h2>
+
+            <p id="mensagem-busca">
+                Digite o nome de um hambúrguer ou escolha um ingrediente.
+            </p>
+
+            <div id="lista-resultados" class="lista-resultados">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="img/yglogo.png" alt="YG Burguer">
+
+        <p>O simples da melhor forma.</p>
+        <p>© 2026 YG Burguer.</p>
+        <p>31 97548278</p>
+        <p>12501620@aluno.cotemig.com.br</p>
+        <p>Privacidade e termos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

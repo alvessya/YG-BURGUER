@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - YG Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="alternar-tema" class="botao-tema" type="button">
+    Modo escuro
+    </button>
+    
+<body>
+
+
+    <div class="faixa">
+        SABOR DE VERDADE NÃO SE EXPLICA. SE MORDE.
+    </div>
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/yglogo.png" alt="YG Burguer">
+            </a>
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="nossojeito.html">Nosso Jeito</a>
+            <a href="sacola.html">
+                Sacola <span id="contador-sacola">0</span>
+            </a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+        <div class="menu-direita">
+            <a href="cadastro.html" class="botao-escuro">
+                CADASTRAR ↗
+            </a>
+        </div>
+    </header>
+
+    <main class="pagina-perfil">
+
+
+        <aside class="perfil-lateral">
+
+            <div class="usuario-perfil">
+                <div class="avatar-perfil">👤</div>
+                <h2 id="nome-lateral">Meu Perfil</h2>
+                <p id="email-lateral">Meu e-mail</p>
+            </div>
+
+            <div class="menu-perfil">
+                <button class="ativo" onclick="irParaPerfil('dados')">
+                    ♙ &nbsp; Meus dados
+                </button>
+
+                <button onclick="irParaPerfil('pedidos')">
+                    ♧ &nbsp; Meus pedidos
+                </button>
+
+                <button onclick="irParaPerfil('endereco')">
+                    ♧ &nbsp; Endereços
+                </button>
+
+                <button onclick="avisoPerfil()">
+                    ▣ &nbsp; Formas de pagamento
+                </button>
+
+                <button onclick="avisoPerfil()">
+                    ♡ &nbsp; Favoritos
+                </button>
+
+                <button onclick="avisoPerfil()">
+                    ♧ &nbsp; Notificações
+                </button>
+            </div>
+
+            <div class="frase-lateral">
+                Aqui você sempre<br>
+                tem um motivo<br>
+                a mais pra<br>
+                pedir YG! 
+            </div>
+
+           
+
+        </aside>
+
+
+        <section class="perfil-conteudo">
+
+
+            <div class="banner-perfil">
+                <div>
+                    <h1>MEUS DADOS</h1>
+                    <p>
+                        Aqui você pode atualizar suas informações pessoais.
+                    </p>
+                </div>
+
+                <div class="frase-banner-perfil">
+                    BORA<br>
+                    DE BURGUER? 
+                </div>
+            </div>
+
+
+            <section class="dados-pessoais" id="dados">
+
+                <h2>INFORMAÇÕES PESSOAIS</h2>
+
+                <form onsubmit="salvarPerfil(); return false;">
+
+                    <div class="campos-perfil">
+
+                        <div class="grupo-perfil">
+                            <label for="perfilNome">
+                                Nome completo *
+                            </label>
+
+                            <input type="text" id="perfilNome" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="grupo-perfil">
+                            <label for="perfilEmail">
+                                E-mail *
+                            </label>
+
+                            <input type="email" id="perfilEmail" placeholder="seuemail@gmail.com" required>
+                        </div>
+
+                        <div class="grupo-perfil">
+                            <label for="telefone">
+                                Telefone *
+                            </label>
+
+                            <input type="text" id="telefone" maxlength="14" oninput="mascara_telefone()"
+                                placeholder="(31)99999-9999" required>
+                        </div>
+
+                        <div class="grupo-perfil">
+                            <label for="perfilCpf">
+                                CPF *
+                            </label>
+
+                            <input type="text" id="perfilCpf" maxlength="14" oninput="mascara_cpf()"
+                                placeholder="000.000.000-00" required>
+                        </div>
+
+                        <div class="grupo-perfil">
+                            <label for="perfilNascimento">
+                                Data de nascimento *
+                            </label>
+
+                            <input type="date" id="perfilNascimento" required>
+                        </div>
+
+                        <div class="grupo-perfil">
+                            <label for="perfilGenero">
+                                Gênero
+                            </label>
+
+                            <select id="perfilGenero">
+                                <option value="">Selecione</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Outro">Outro</option>
+                                <option value="Prefiro não informar">
+                                    Prefiro não informar
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="botao-salvar-perfil">
+                        ▣ &nbsp; SALVAR ALTERAÇÕES
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section class="endereco-perfil" id="endereco">
+
+                <div class="titulo-secao-perfil">
+                    <h2>♧ &nbsp; MEU ENDEREÇO PRINCIPAL</h2>
+
+                    <button onclick="editarEndereco()">
+                        Editar endereço
+                    </button>
+                </div>
+
+                <p id="endereco-salvo">
+                    Nenhum endereço cadastrado.
+                </p>
+
+                <div id="formulario-endereco" style="display:none;">
+
+                    <label for="ruaPerfil">Rua e número</label>
+                    <input type="text" id="ruaPerfil" placeholder="Rua e número">
+
+                    <label for="bairroPerfil">Bairro</label>
+                    <input type="text" id="bairroPerfil" placeholder="Bairro">
+
+                    <label for="cidadePerfil">Cidade</label>
+                    <input type="text" id="cidadePerfil" placeholder="Cidade">
+
+                    <label for="cepPerfil">CEP</label>
+                    <input type="text" id="cepPerfil" maxlength="9" oninput="mascara_cep()" placeholder="00000-000">
+
+                    <button onclick="salvarEndereco()" class="botao-salvar-perfil">
+                        SALVAR ENDEREÇO
+                    </button>
+
+                </div>
+
+            </section>
+
+            <div class="cards-perfil">
+
+                <section class="card-perfil" id="pedidos">
+                    <h2>♧ &nbsp; MEUS PEDIDOS</h2>
+
+                    <p>
+                        Acompanhe o status dos seus pedidos
+                        e veja seu histórico.
+                    </p>
+
+                    <button onclick="verPedidos()">
+                        VER PEDIDOS ↗
+                    </button>
+                </section>
+
+                <section class="card-perfil">
+                    <h2>♕ &nbsp; PROGRAMA DE PONTOS</h2>
+
+                    <p>
+                        Acumule pontos e troque por
+                        vantagens exclusivas!
+                    </p>
+
+                    <h3>⭐ <span id="pontosUsuario">0</span> pontos</h3>
+
+                    <p>Peça seu hambúrguer favorito e acumule pontos.</p>
+                </section>
+
+            </div>
+
+            <div class="banner-final-perfil">
+
+                <img src="img/yglogo.png" alt="YG Especial">
+
+                <h2>
+                    SEU PEDIDO,<br>
+                    DO SEU JEITO!
+                </h2>
+
+                <a href="cardapio.html">
+                    PEÇA SEU HAMBÚRGUER 
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="img/yglogo.png" alt="YG Burguer">
+
+        <p>O simples da melhor forma.</p>
+
+        <p>© 2026 YG Burguer.</p>
+        <p>31 97548278</p>
+        <p>12501620@aluno.cotemig.com.br</p>
+        <p>Privacidade e termos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

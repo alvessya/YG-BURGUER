@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - YG Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="alternar-tema" class="botao-tema" type="button">
+    Modo escuro
+    </button>
+    
+<body>
+
+    <div class="faixa">
+        SABOR DE VERDADE NÃO SE EXPLICA. SE MORDE.
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/yglogo.png" alt="YG Burguer">
+            </a>
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="nossojeito.html">Nosso Jeito</a>
+            <a href="sacola.html">Sacola <span id="contador-sacola">0</span></a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+        <div class="menu-direita">
+            <input type="text" id="pesquisa" placeholder="Pesquisar...">
+            <button onclick="pesquisar()"></button>
+            <a href="cadastro.html" class="botao-escuro">CADASTRAR ↗</a>
+        </div>
+    </header>
+
+    <main>
+
+  
+
+        <section class="banner">
+            <div class="banner-texto">
+                <h4>YG BURGUER / O MELHOR DE TODOS</h4>
+
+                <h1>
+                    A MELHOR HAMBURGUERIA<br>
+                    DA CIDADE!
+                </h1>
+
+                <p>
+                    Conheça o cardápio da YG BURGUER!
+                    Hambúrgueres preparados com ingredientes
+                    selecionados, combinações irresistíveis
+                    e muito sabor em cada mordida.
+                    Do clássico ao mais marcante,
+                    encontre seu favorito e descubra
+                    uma nova forma de matar a fome.
+                </p>
+
+                <a href="#lista-cardapio" class="botao-escuro">
+                    VER CARDÁPIO ↗
+                </a>
+            </div>
+
+            <div class="banner-imagem">
+                <img src="img/omelhor.png" alt="Hambúrguer YG">
+            </div>
+        </section>
+
+
+
+        <section class="desejo">
+            <div>
+                <h2>DESEJO DO DIA:</h2>
+                <h2>PEGA ESSA DICA E VAI DE YG BURGUER.</h2>
+            </div>
+
+            <a href="#lista-cardapio" class="botao-vermelho">
+                FAZER PEDIDO ↗
+            </a>
+        </section>
+
+
+
+        <section class="cardapio-completo" id="lista-cardapio">
+
+            <div class="titulo-cardapio">
+                <h2>DIRETO AO PONTO</h2>
+                <h3>AS ESTRELAS DA CASA</h3>
+                <p>
+                    Cinco hambúrgueres incríveis.
+                    Escolha o seu favorito!
+                </p>
+            </div>
+
+            
+
+            <div class="lanche">
+                <div class="lanche-imagem">
+                    <img src="img/H1.JPG" alt="YG Especial">
+                </div>
+
+                <div class="lanche-info">
+                    <p class="subtitulo">01 / ESPECIAL É COM YG MESMO</p>
+                    <h2>YG ESPECIAL</h2>
+
+                    <p>
+                        Pão brioche, burger 170g, cheddar,
+                        bacon, alface, tomate e molho
+                        especial da casa.
+                    </p>
+
+                    <h3>R$ 32,90</h3>
+
+                    <button onclick="adicionarSacola('YG Especial', 32.90)">
+                        ADICIONAR À SACOLA +
+                    </button>
+                </div>
+            </div>
+
+        
+
+            <div class="lanche invertido">
+                <div class="lanche-imagem">
+                    <img src="img/H2.JPG" alt="Double YG">
+                </div>
+
+                <div class="lanche-info">
+                    <p class="subtitulo">02 / SABOR EM DOBRO</p>
+                    <h2>DOUBLE YG</h2>
+
+                    <p>
+                        Pão brioche, 2 burgers 170g,
+                        cheddar, bacon e molho
+                        especial da casa.
+                    </p>
+
+                    <h3>R$ 42,90</h3>
+
+                    <button onclick="adicionarSacola('Double YG', 42.90)">
+                        ADICIONAR À SACOLA +
+                    </button>
+                </div>
+            </div>
+
+        
+
+            <div class="lanche">
+                <div class="lanche-imagem">
+                    <img src="img/H3.JPG" alt="Spicy YG">
+                </div>
+
+                <div class="lanche-info">
+                    <p class="subtitulo">03 / PRA QUEM GOSTA DE OUSAR</p>
+                    <h2>SPICY YG</h2>
+
+                    <p>
+                        Pão brioche, burger 170g, cheddar,
+                        bacon, pimenta jalapeño,
+                        alface, tomate e molho especial.
+                    </p>
+
+                    <h3>R$ 35,90</h3>
+
+                    <button onclick="adicionarSacola('Spicy YG', 35.90)">
+                        ADICIONAR À SACOLA +
+                    </button>
+                </div>
+            </div>
+
+           
+
+            <div class="lanche invertido">
+                <div class="lanche-imagem">
+                    <img src="img/H4.JPG" alt="BBQ Bacon">
+                </div>
+
+                <div class="lanche-info">
+                    <p class="subtitulo">04 / O REI DO BACON</p>
+                    <h2>BBQ BACON</h2>
+
+                    <p>
+                        Pão brioche, burger 170g, cheddar,
+                        bacon crocante e molho barbecue.
+                    </p>
+
+                    <h3>R$ 37,90</h3>
+
+                    <button onclick="adicionarSacola('BBQ Bacon', 37.90)">
+                        ADICIONAR À SACOLA +
+                    </button>
+                </div>
+            </div>
+
+            
+
+            <div class="lanche">
+                <div class="lanche-imagem">
+                    <img src="img/H5.JPG" alt="Funchi YG">
+                </div>
+
+                <div class="lanche-info">
+                    <p class="subtitulo">05 / UMA COMBINAÇÃO ESPECIAL</p>
+                    <h2>FUNCHI YG</h2>
+
+                    <p>
+                        Pão brioche, burger 170g,
+                        queijo prato, funghi, rúcula
+                        e molho especial.
+                    </p>
+
+                    <h3>R$ 39,90</h3>
+
+                    <button onclick="adicionarSacola('Funchi YG', 39.90)">
+                        ADICIONAR À SACOLA +
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+       
+
+        <section class="final-cardapio">
+            <h2>BATEU AQUELA FOME?</h2>
+            <p>
+                Seu hambúrguer favorito está esperando por você!
+            </p>
+
+            <a href="sacola.html" class="botao-escuro">
+                VER MINHA SACOLA ↗
+            </a>
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <img src="img/yglogo.png" alt="YG Burguer">
+        <p>O simples da melhor forma.</p>
+        <p>© 2026 YG Burguer - Todos os direitos reservados.</p>
+        <p>Feito com muito sabor! </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

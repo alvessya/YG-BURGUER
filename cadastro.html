@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - YG Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="alternar-tema" class="botao-tema" type="button">
+    Modo escuro
+    </button>
+    
+<body>
+
+
+
+    <div class="faixa">
+        SABOR DE VERDADE NÃO SE EXPLICA. SE MORDE.
+    </div>
+
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/yglogo.png" alt="YG Burguer">
+            </a>
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="nossojeito.html">Nosso Jeito</a>
+            <a href="sacola.html">
+                Sacola <span id="contador-sacola">0</span>
+            </a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+        <div class="menu-direita">
+            <a href="cadastro.html" class="botao-escuro">
+                CADASTRAR ↗
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pagina-cadastro">
+
+
+
+            <div class="cadastro-esquerda">
+
+                <h4>VEM FAZER PARTE<br>DA FAMÍLIA YG!</h4>
+
+                <h1>CADASTRE-SE<br>AGORA!</h1>
+
+                <p>
+                    Com seu cadastro, você acompanha
+                    seus pedidos, recebe novidades
+                    exclusivas e ainda garante
+                    mais praticidade na hora de pedir
+                    seu burger favorito.
+                </p>
+
+                <div class="vantagens">
+
+                    <div class="vantagem">
+                        <span>🚀</span>
+                        <p>Pedidos mais rápidos<br>e fáceis</p>
+                    </div>
+
+                    <div class="vantagem">
+                        <span>🏷️</span>
+                        <p>Ofertas e novidades<br>em primeira mão</p>
+                    </div>
+
+                    <div class="vantagem">
+                        <span>♡</span>
+                        <p>Seus pedidos<br>salvos e favoritos</p>
+                    </div>
+
+                    <div class="vantagem">
+                        <span>☆</span>
+                        <p>Mais praticidade<br>e segurança</p>
+                    </div>
+
+                </div>
+
+                <img src="imagens/cadastro-burguer.png" alt="Hambúrguer YG" class="imagem-cadastro">
+
+            </div>
+
+
+            <div class="cadastro-direita">
+
+                <h4>CRIAR CONTA</h4>
+                <h1>É MUITO SIMPLES!</h1>
+
+                <p class="descricao-cadastro">
+                    Preencha os dados abaixo e já comece
+                    a aproveitar todas as vantagens.
+                </p>
+
+                <form onsubmit="cadastrar(); return false;">
+
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+                    <label for="telefone">Telefone *</label>
+                    <input type="text" id="telefone" placeholder="(31)99999-9999" maxlength="14"
+                        oninput="mascara_telefone()" required>
+
+                    <label for="senha">Senha *</label>
+
+                    <div class="campo-senha">
+                        <input type="password" id="senha" placeholder="Crie sua senha" required>
+
+                        <button type="button" onclick="mostrarSenha('senha')">
+                            👁
+                        </button>
+                    </div>
+
+                    <label for="confirmarSenha">
+                        Confirmar senha *
+                    </label>
+
+                    <div class="campo-senha">
+                        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+
+                        <button type="button" onclick="mostrarSenha('confirmarSenha')">
+                            👁
+                        </button>
+                    </div>
+
+                    <div class="termos-cadastro">
+                        <input type="checkbox" id="termos" required>
+
+                        <label for="termos">
+                            Eu concordo com os
+                            <a href="#termos-info">Termos de Uso</a>
+                            e
+                            <a href="#termos-info">Política de Privacidade</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="botao-cadastrar">
+                        CADASTRAR ↗
+                    </button>
+
+                </form>
+
+                <div class="separador-cadastro">
+                    <span>ou</span>
+                </div>
+
+                <button class="botao-google" onclick="cadastroGoogle()">
+                    <strong>G</strong> Cadastrar com Google
+                </button>
+
+                <p class="entrar-cadastro">
+                    Já tem uma conta?
+                    <a href="perfil.html">Entrar</a>
+                </p>
+
+                <p id="termos-info" class="aviso-termos">
+                    Projeto demonstrativo da YG Burguer.
+                    O cadastro é salvo apenas neste navegador.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="rodape">
+        <img src="img/yglogo.png" alt="YG Burguer">
+        <p>O simples da melhor forma.</p>
+        <p>© 2026 YG Burguer - Todos os direitos reservados.</p>
+        <p>Feito com muito sabor! 🍔</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
